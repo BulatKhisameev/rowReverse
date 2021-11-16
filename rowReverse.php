@@ -8,7 +8,6 @@ function rowReverse($row){
     }
     return $isUpper ? mb_convert_case($r, MB_CASE_TITLE_SIMPLE ) : $r;
 }
-
 $proposal = 'Привет! Давно не виделись.';
 $reverse = preg_replace_callback('~[А-Яа-яЁё]+~u', 'rowReverse', $proposal);
 echo $reverse;
